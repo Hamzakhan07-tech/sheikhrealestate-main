@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fraud Alerts | Hamza Real Estate</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #000;
+      color: #bbb;
+      line-height: 1.8;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #111, #222);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #aaa;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 50px 20px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #eee;
+      margin-bottom: 20px;
+      border-left: 5px solid #f39c12;
+      padding-left: 12px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+    }
+    ul li::before {
+      content: "⚠️";
+      position: absolute;
+      left: 0;
+    }
+
+    .tips li::before {
+      content: "✅";
+      color: #2ecc71;
+    }
+
+    footer {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #333;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚨 Fraud Alerts</h1>
+    <p>Stay safe from property scams with Hamza Real Estate. Knowledge is your best protection.</p>
+  </header>
+
+  <section>
+    <h2>Common Property Frauds</h2>
+    <ul>
+      <li>Fake property listings with attractive but unreal prices.</li>
+      <li>Scammers asking for advance payments without legal documents.</li>
+      <li>Forged property ownership papers or duplicate selling.</li>
+      <li>Rental frauds with fake landlords demanding security deposits.</li>
+      <li>Fraudulent brokers charging hidden commissions.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How to Identify Frauds</h2>
+    <ul>
+      <li>Unverified sellers avoiding face-to-face meetings.</li>
+      <li>No official documentation (sale deed, registry, NOC).</li>
+      <li>Pressuring buyers for urgent decisions.</li>
+      <li>Payment requests only via cash or personal accounts.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Safety Tips</h2>
+    <ul class="tips">
+      <li>Always verify property ownership in government records.</li>
+      <li>Never pay advance without written agreements.</li>
+      <li>Use legal advisors for document verification.</li>
+      <li>Demand official receipts for every payment.</li>
+      <li>Work with trusted and registered real estate companies.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Legal & Support</h2>
+    <p>If you suspect fraud, immediately report to:</p>
+    <ul class="tips">
+      <li>Local Police & FIA Cybercrime Unit</li>
+      <li>Pakistan Real Estate Regulatory Authorities</li>
+      <li>Hamza Real Estate Support Team</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Hamza Real Estate | Protecting Buyers & Sellers from Frauds</p>
+  </footer>
+
+  <script>
+    // Scroll animation
+    const sections = document.querySelectorAll("section");
+    const showSection = () => {
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          sec.classList.add("visible");
+        }
+      });
+    };
+    window.addEventListener("scroll", showSection);
+    showSection();
+  </script>
+</body>
+</html>
